@@ -1,0 +1,35 @@
+﻿<Window x:Class="HighTemperatureCharacterizationSystem2._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" ResizeMode="NoResize" MaxHeight="750" MaxWidth="1000" Height="550" Width="700" Grid.IsSharedSizeScope="True">
+    <Grid Width="750">
+        <Button Name="testButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="76" Click="testButton_Click_1" Margin="0,0,114,164">Measure EC</Button>
+        <TextBox x:Name="testOutput" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,125,0,235" Width="576" Height="86" Text="Test Log :" FontSize="16"/>
+        <TextBox Name="addressBox" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,22,0,0" Width="210" TextChanged="addressBox_TextChanged">GPIB1::9::INSTR</TextBox>
+        <Label Name="temperature1" Content="0" HorizontalAlignment="Left" Height="27" Margin="419,22,0,0" VerticalAlignment="Top" Width="63" FontSize="16" FontWeight="Bold"/>
+        <Label Name="temperature2" Content="0" HorizontalAlignment="Left" Height="27" Margin="419,54,0,0" VerticalAlignment="Top" Width="63" FontSize="16" FontWeight="Bold" RenderTransformOrigin="1.175,0.481"/>
+        <Label x:Name="temperature1_Copy" Content="Temperature Cold : " HorizontalAlignment="Left" Height="41" Margin="241,20,0,0" VerticalAlignment="Top" Width="155" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="temperature2_Copy" Content="Temperature Hot  :" HorizontalAlignment="Left" Height="41" Margin="241,52,0,0" VerticalAlignment="Top" Width="155" FontWeight="Bold" FontSize="16"/>
+        <Label x:Name="Slope" Content="Slope will appear here" HorizontalAlignment="Left" Margin="318,371,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="CalcSlope" Content="Calc Slope" HorizontalAlignment="Left" Height="22" Margin="318,399,0,0" VerticalAlignment="Top" Width="64" Click="CalcSlope_Click"/>
+        <TextBox x:Name="coldContTemp" HorizontalAlignment="Left" Height="22" Margin="24,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" TextChanged="coldContTemp_TextChanged" KeyDown="coldContTemp_KeyDown" />
+        <Label Content="Hot Side" HorizontalAlignment="Left" Margin="93,340,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="hotContTemp" HorizontalAlignment="Left" Height="23" Margin="93,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50" TextChanged="hotContTemp_TextChanged" KeyDown="hotContTemp_KeyDown"/>
+        <Label Content="Cold Side" HorizontalAlignment="Left" Margin="24,340,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.947,0.654"/>
+        <Button x:Name="contButton" Content="Set Controllers" HorizontalAlignment="Left" Margin="42,399,0,0" VerticalAlignment="Top" Width="89" Click="contButtonClick"/>
+        <Label Content="Cold Set Value" HorizontalAlignment="Left" Margin="161,302,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hot Set Value" HorizontalAlignment="Left" Margin="161,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.447,-0.923"/>
+        <Label Content="Cold Proc Value" HorizontalAlignment="Left" Margin="161,338,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hot Proc Value" HorizontalAlignment="Left" Margin="161,356,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="coldSetValue" Content="0" HorizontalAlignment="Left" Margin="260,301,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="hotSetValue" Content="0" HorizontalAlignment="Left" Margin="260,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.75,0.538"/>
+        <Label x:Name="coldProcValue"  Content="0" HorizontalAlignment="Left" Margin="260,340,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="hotProcValue" Content="0" HorizontalAlignment="Left" Margin="260,359,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="readCont" Content="Read Controllers" HorizontalAlignment="Left" Margin="180,399,0,0" VerticalAlignment="Top" Width="96" Click="readControllers"/>
+        <Button x:Name="measureSCstep" Content="Measure SC" HorizontalAlignment="Left" Margin="560,371,0,0" VerticalAlignment="Top" Width="75" Click="measureSCstepclick" Height="20"/>
+        <Label x:Name="saveFilePath" Content="Label" HorizontalAlignment="Left" Margin="24,266,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="status" Content="Status" HorizontalAlignment="Left" Margin="302,482,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="setPoints" Content="Current Set Points" HorizontalAlignment="Left" Margin="302,459,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.316,-0.115"/>
+        <Label x:Name="contStatus" Content="Controller Status" HorizontalAlignment="Left" Margin="302,434,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
